@@ -1,21 +1,18 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import Head from "next/head";
+import NavBar from "../components/NavBar/index.jsx";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Enterview</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>Enterview</h1>
-      <main className={styles.main}>
+      <NavBar />
+      <main className={styles.main}></main>
 
-      </main>
-
-      <footer className={styles.footer}>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
+  );
 }

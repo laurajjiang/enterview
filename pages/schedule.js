@@ -7,7 +7,25 @@ import styles from 'react-big-calendar/lib/css/react-big-calendar.css'
 
 
 const localizer = momentLocalizer(moment);
-const myEventsList = []
+const myEventsList = [
+    {
+        id: 0,
+        title: 'Test Meeting',
+        allDay: false,
+        start: new Date(2021, 0, 5, 14),
+        end: new Date(2021, 0, 5 ,16),
+        desc: 'Ya'
+    }
+    ,
+    {
+        id: 2,
+        title: 'Test event 2',
+        allDay: false,
+        start: new Date(2021, 0, 7, 15),
+        end: new Date(2021, 0, 7 , 19),
+    }
+
+]
 export class schedule extends Component {
     render() {
         return (

@@ -30,6 +30,7 @@ export default function Schedule() {
         <title>Enterview</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <NavBar></NavBar>
       <div>
         <Calendar
           localizer={localizer}

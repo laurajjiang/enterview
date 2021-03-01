@@ -3,7 +3,7 @@ import { Alignment, Button, Navbar } from "@blueprintjs/core";
 
 export default function NavBar() {
   return (
-    <Navbar fixedToTop>
+    <Navbar>
       <Navbar.Group
         style={{
           display: "flex",

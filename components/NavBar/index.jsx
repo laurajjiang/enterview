@@ -1,50 +1,26 @@
 import React from "react";
-import { Alignment, Button, Navbar } from "@blueprintjs/core";
+import Link from "next/link";
+
+import styles from "../../styles/Home.module.css";
 
 export default function NavBar() {
   return (
-    <Navbar fixedToTop>
-      <Navbar.Group
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
-        <Navbar.Heading>insert app name</Navbar.Heading>
-        <Navbar.Divider />
-        <Button
-          className='bp3-minimal'
-          icon='home'
-          text='Home'
-          onClick={(e) => (window.location.href = "/")}
-        />
-        <Button
-          className='bp3-minimal'
-          icon='calendar'
-          text='Schedule'
-          onClick={(e) => (window.location.href = "/schedule")}
-        />
-        <Button
-          className='bp3-minimal'
-          icon='annotation'
-          text='Practice'
-          onClick={(e) => (window.location.href = "/practice")}
-        />
-        <Button
-          className='bp3-minimal'
-          icon='archive'
-          text='Resources'
-          onClick={(e) => (window.location.href = "/resources")}
-        />
-      </Navbar.Group>
-      <Navbar.Group align={Alignment.RIGHT}>
-        <Button
-          className='bp3-minimal'
-          icon='id-number'
-          text='About'
-          onClick={(e) => (window.location.href = "/about")}
-        />
-      </Navbar.Group>
-    </Navbar>
+    <div className={styles.navbar}>
+      <Link href='/' className='link'>
+        <h2>site name</h2>
+      </Link>
+      <Link href='/practice' className='link'>
+        practice
+      </Link>
+      <Link href='/resources' className='link'>
+        resources
+      </Link>
+      <Link href='/schedule' className='link'>
+        schedule
+      </Link>
+      <Link href='/about' className='link'>
+        about
+      </Link>
+    </div>
   );
 }

@@ -12,21 +12,19 @@ export default function About() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <NavBar />
-      <div className={styles.title}>
-        <h3>About</h3>
-        <h1 className='bp3-heading'>
-          A mock interview with a peer is the best way to start working
-          <br /> on "Lorem ipsum dolor sit amet, consectetur adipisc ing elit,
-          <br /> sed do eiusmod tempor incididunt ut labore et dolore magna
-          <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          <br /> aliqua. laboris nisi ut aliquip ex ea commodo consequat.
-          <br /> Duis aute irure dolor in reprehenderit in voluptate velit
-          <br /> esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          <br /> occaecat cupidatat non proident, sunt in culpa qui officia
-          <br /> deserunt mollit anim id est laborum."your interview skills
+      <div className={styles.main}>
+        <h2>about us and the site</h2>
+        <p className={styles.description}>
+          this site was created as a part of a cs499 project but also out of a
+          desire for more resources to help students with interview preparation.
           <br />
-          in a low-pressure interview. Simply
-        </h1>
+          <br />
+          this project is built by students for students, so please let us know
+          if you have any comments, suggestions, or concerns.
+          <br />
+          <br />
+          interested in being an interviewer? submit this form:
+        </p>
         <br />
       </div>
     </div>

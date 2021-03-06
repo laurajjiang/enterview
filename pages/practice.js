@@ -54,11 +54,7 @@ export default function Practice() {
           <span />
         )}
       </div>
-      <footer className={styles.footer}>
-        <p className={styles.footerText}>
-          created with ♡ | interested in being an interviewer? let us know!
-        </p>
-      </footer>
+      
     </div>
   );
 }

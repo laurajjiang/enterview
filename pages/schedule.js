@@ -30,7 +30,7 @@ export default function Schedule() {
         <title>Enterview</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <NavBar/>
+      <NavBar />
       <div>
         <Calendar
           localizer={localizer}
@@ -40,11 +40,6 @@ export default function Schedule() {
           style={{ height: 500 }}
         />
       </div>
-      <footer className={styles.footer}>
-        <p className={styles.footerText}>
-          created with ♡ | interested in being an interviewer? let us know!
-        </p>
-      </footer>
     </div>
   );
 }

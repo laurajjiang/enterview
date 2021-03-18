@@ -3,10 +3,10 @@ import Head from "next/head";
 import NavBar from "../components/NavBar/index.jsx";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import styles from "react-big-calendar/lib/css/react-big-calendar.css";
-import firebase from 'firebase'
-import Calendars from '../components/Calender/calender'
-var test2
+import styles from "../styles/Home.module.css";
+import firebase from "firebase";
+import Calendars from "../components/Calender/calender";
+var test2;
 var firebaseConfig = {
   apiKey: "AIzaSyAA6fzNvI9aTLBIIowaXtRVONasSiAJGnk",
   authDomain: "cs499project-8108f.firebaseapp.com",
@@ -15,10 +15,10 @@ var firebaseConfig = {
   storageBucket: "cs499project-8108f.appspot.com",
   messagingSenderId: "166082491960",
   appId: "1:166082491960:web:384ad311ad23d4386818cd",
-  measurementId: "G-4N4MJ7MYK0"
+  measurementId: "G-4N4MJ7MYK0",
 };
 //firebase.initializeApp(firebaseConfig);
-var test
+var test;
 //var ref = firebase.database().ref();
 
 const localizer = momentLocalizer(moment);
@@ -40,11 +40,11 @@ const myEventsList = [
   },
 ];
 export default function Schedule() {
-var a
-var test
-//var ref = firebase.database().ref();
+  var a;
+  var test;
+  //var ref = firebase.database().ref();
 
-//callMe();
+  //callMe();
   return (
     <div>
       <Head>
@@ -52,7 +52,17 @@ var test
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <NavBar />
-      <Calendars></Calendars>
+      <div className={styles.main}>
+        <h2>schedule an interview</h2>
+        <p className={styles.description}>
+          Book any available spot with our interviewers. You'll receive a
+          confirmation email and your interviewer will set up a Zoom session for
+          you to meet in.
+        </p>
+      </div>
+      <div className={styles.calendar}>
+        <Calendars />
+      </div>
     </div>
   );
 }

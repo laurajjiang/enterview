@@ -59,8 +59,6 @@ export class Calender extends Component {
         if(nameprompt!=null){
         ref.update({title:`${event.title}| BOOKED` ,interviewee_name: nameprompt,interviewee_email:emailprompt,})
         console.log("You signed up")
-        console.log(event)
-        console.log(event.id)
       }
     }
     }
@@ -73,6 +71,13 @@ export class Calender extends Component {
   return myEventsList
   }
     render() {
+      if(this.state.calevents.data != undefined){
+        myEventsList = this.state.calevents.data
+        console.log(myEventsList)
+        console.log(myEventsList.length)
+        var result = myEventsList.filter(events => events.interviewee_name=="")
+        console.log(result)
+      }
         return (
             <div>
               {this.state.calevents.data == undefined
@@ -82,7 +87,7 @@ export class Calender extends Component {
               onSelectEvent={event => this.onEventClick(event)}
               onSelectSlot={(slotInfo) => this.onSlotChange(slotInfo) }
               localizer={localizer}
-              events={this.state.calevents.data}
+              events={this.state.calevents.data.filter(myevents => myevents.interviewee_name=="" && myevents.interviewee_email=="")}
               startAccessor='start'
               endAccessor='end'
               style={{ height: 500 }}

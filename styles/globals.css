@@ -22,3 +22,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
+  border-color: #7b9aa6;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #7b9aa644;
+  outline: 0 none;
+}

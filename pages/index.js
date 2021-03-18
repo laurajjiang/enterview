@@ -14,7 +14,7 @@ export default function Home() {
       <div className={styles.main}>
         <div className={styles.flexrow}>
           <img src={"/topHomeImg.png"} />
-          <div className={styles.description}>
+          <div className={styles.description2}>
             <h2>OUR MISSION</h2>
             <h3>We want to help you ace your interview</h3>
             <br />
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.flexrow}>
-        <div className={styles.description}>
+        <div className={styles.description2}>
           <h3>Be an interviewer or an interviewee, both are great</h3>
           <br />
           <div

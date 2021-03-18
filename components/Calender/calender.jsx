@@ -49,13 +49,26 @@ export class Calender extends Component {
     console.log('endTime', endDate); //shows the end time chosen
   }
   onEventClick(event) {
+    if(event.interviewee_name=="" && event.interviewee_email==""){
     var bookconfirm= window.confirm("Would you like to book this ? ")
-    var emailprompt = window.prompt("Enter an email", "")
+    var nameprompt = window.prompt("Enter your name:", "")
+    var emailprompt = window.prompt("Enter your email:", "")
+    var ref = firebase.database().ref(`/${event.id}`);
     if(bookconfirm == true){
       if(emailprompt!= null){
+        if(nameprompt!=null){
+        ref.update({title:`${event.title}| BOOKED` ,interviewee_name: nameprompt,interviewee_email:emailprompt,})
         console.log("You signed up")
+        console.log(event)
+        console.log(event.id)
       }
     }
+    }
+  }
+  else{
+    window.alert("Already booked event please choose another.")
+    console.log("Already booked event please choose another.")
+  }
 
   return myEventsList
   }

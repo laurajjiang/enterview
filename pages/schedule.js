@@ -5,6 +5,7 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import styles from "react-big-calendar/lib/css/react-big-calendar.css";
 import firebase from 'firebase'
+import Calendars from '../components/Calender/calender'
 var test2
 var firebaseConfig = {
   apiKey: "AIzaSyAA6fzNvI9aTLBIIowaXtRVONasSiAJGnk",
@@ -16,9 +17,9 @@ var firebaseConfig = {
   appId: "1:166082491960:web:384ad311ad23d4386818cd",
   measurementId: "G-4N4MJ7MYK0"
 };
-firebase.initializeApp(firebaseConfig);
+//firebase.initializeApp(firebaseConfig);
 var test
-var ref = firebase.database().ref();
+//var ref = firebase.database().ref();
 
 const localizer = momentLocalizer(moment);
 const myEventsList = [
@@ -31,7 +32,7 @@ const myEventsList = [
     desc: "Ya",
   },
   {
-    id: 2,
+    id: 1,
     title: "Test",
     allDay: false,
     start: new Date(2021, 0, 7, 15),
@@ -39,15 +40,11 @@ const myEventsList = [
   },
 ];
 export default function Schedule() {
-  function getData(){
-    ref.on("value", function(snapshot) {
-      test = snapshot.val()
-      console.log("test",test)
-      test2 = test[0].start
-      return test2
-   });
-  }
-  console.log(getData())
+var a
+var test
+//var ref = firebase.database().ref();
+
+//callMe();
   return (
     <div>
       <Head>
@@ -55,15 +52,7 @@ export default function Schedule() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <NavBar />
-      <div>
-        <Calendar
-          localizer={localizer}
-          events={myEventsList}
-          startAccessor='start'
-          endAccessor='end'
-          style={{ height: 500 }}
-        />
-      </div>
+      <Calendars></Calendars>
     </div>
   );
 }
